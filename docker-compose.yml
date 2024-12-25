@@ -3,6 +3,7 @@ version: "3.5"
 x-environment:
   &default-back-environment
   # These environment variables will be used by taiga-back and taiga-async.
+  
   # Database settings
   POSTGRES_DB: "taiga"
   POSTGRES_USER: "${POSTGRES_USER}"
@@ -13,6 +14,8 @@ x-environment:
   TAIGA_SITES_SCHEME: "${TAIGA_SCHEME}"
   TAIGA_SITES_DOMAIN: "${TAIGA_DOMAIN}"
   TAIGA_SUBPATH: "${SUBPATH}"
+  TAIGA_ADMIN_EMAIL: koharudin.mail07@gmail.com
+  TAIGA_ADMIN_PASSWORD: admin123
   # Email settings.
   EMAIL_BACKEND: "django.core.mail.backends.${EMAIL_BACKEND}.EmailBackend"
   DEFAULT_FROM_EMAIL: "${EMAIL_DEFAULT_FROM}"
